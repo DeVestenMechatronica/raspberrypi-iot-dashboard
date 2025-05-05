@@ -1,8 +1,8 @@
 # Monitor
 Some interesting text
 
-- Opslag van sensor data met InfluxDB
-- Visualisatie van de data met Grafana
+- Opslag van sensor data met `InfluxDB` database
+- Visualisatie van de data met `Grafana` dashboard
 
 ## Installatie
 Voor we beginnen zorgen we dat ons systeem up-to-date is:
@@ -10,7 +10,7 @@ Voor we beginnen zorgen we dat ons systeem up-to-date is:
 sudo apt update
 sudo apt upgrade -y
 ```
-### InfluxDB
+### InfluxDB3 Core
 
 Installeer `InfluxDB`, en volg de instructies van het installatiescript
 ```sh
@@ -21,6 +21,13 @@ Om de `InfluxDB CLI` te gebruiken, voor het volgende commando uit:
 ```sh
 source '/home/mechatronica/.bashrc'
 ```
+
+>[WARNING]
+> Dit is de token, hou deze goed bij!
+> Token: apiv3_VRKtRtzOEYJJ-jDKN8uV3iBuh3g93ArpBdnH_GPyJxAZ0CF_pNDk-nlOxRdzWd4oATd7zppYf2Aees8wP3wScg
+
+#### referenties:
+https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 
 #### Aanmaken database & gebruiker
 In de commandline:
@@ -52,6 +59,18 @@ sudo systemctl start grafana-server
 Controleer de status van de `Grafana` service
 ```sh
 sudo systemctl status grafana-server
+```
+
+### Chromium (browser)
+TODO: ... Grafana werkt met een web-interface ...
+
+Installeer de `Chromium` web browser:
+```
+sudo apt install chromium-browser
+```
+Om te zorgen dat de `Chromium` browser start op ons `Grafana` dashboard wanneer de Raspberry Pi opstart, voeg volgende lijn toe in het bestand `/etc/xdg/labwc/autostart`:
+```
+sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars --ozone-platform=wayland http://localhost:3000 &
 ```
 
 #### Configureer `InfluxDB` als databron voor `Grafana`
