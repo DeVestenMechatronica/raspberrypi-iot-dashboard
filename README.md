@@ -12,26 +12,16 @@ sudo apt upgrade -y
 ```
 ### InfluxDB
 
-Voeg de `InfluxDB` repository en key toe aan de `apt` package manager (als administrator):
+Installeer `InfluxDB`, en volg de instructies van het installatiescript
 ```sh
-sudo curl -fsSL https://repos.influxdata.com/influxdb.key | gpg --dearmor | sudo tee /etc/apt/keyrings/influxdata-archive-keyring.gpg > /dev/null
-sudo echo "deb [signed-by=/etc/apt/keyrings/influxdata-archive-keyring.gpg] https://repos.influxdata.com/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
+curl -O https://www.influxdata.com/d/install_influxdb3.sh
+sh install_influxdb3.sh
 ```
-Installeer `InfluxDB` met `apt` (als administrator):
+Om de `InfluxDB CLI` te gebruiken, voor het volgende commando uit:
 ```sh
-sudo apt update
-sudo apt install influxdb
+source '/home/mechatronica/.bashrc'
 ```
-Start de `InfluxDB` systeem service met `systemctl`:
-```sh
-sudo systemctl unmask influxdb
-sudo systemctl enable influxdb
-sudo systemctl start influxdb
-```
-Controleer de status van de `InfluxDB` service
-```sh
-sudo systemctl status influxdb
-```
+
 #### Aanmaken database & gebruiker
 In de commandline:
 ```sh
