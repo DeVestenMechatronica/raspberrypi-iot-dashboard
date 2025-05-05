@@ -5,6 +5,11 @@ Some interesting text
 - Visualisatie van de data met Grafana
 
 ## Installatie
+Voor we beginnen zorgen we dat ons systeem up-to-date is:
+```sh
+sudo apt update
+sudo apt upgrade -y
+```
 ### InfluxDB
 
 Voeg de `InfluxDB` repository en key toe aan de `apt` package manager (als administrator):
@@ -23,6 +28,20 @@ sudo systemctl unmask influxdb
 sudo systemctl enable influxdb
 sudo systemctl start influxdb
 ```
+Controleer de status van de `InfluxDB` service
+```sh
+sudo systemctl status influxdb
+```
+#### Aanmaken database & gebruiker
+In de commandline:
+```sh
+influx
+> CREATE DATABASE home
+> CREATE USER grafana WITH PASSWORD 'mechatronica' WITH ALL PRIVILEGES
+> GRANT ALL PRIVILEGES ON home TO grafana
+> exit
+```
+
 ### Grafana
 
 Voeg de `Grafana` repository en key to aan de `apt` package manager (als administrator):
@@ -40,3 +59,11 @@ Start de `Grafana` systeem service met `systemctl`:
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
+Controleer de status van de `Grafana` service
+```sh
+sudo systemctl status grafana-server
+```
+
+#### Configureer `InfluxDB` als databron voor `Grafana`
+1) In de browser, open het Grafana dashboard `https://localhost:3000`, en log in met de `admin` credentials.
+2) 
