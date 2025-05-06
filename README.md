@@ -121,4 +121,4 @@ sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars -
 2) 
 
 ## Licentie
-Copyright© 2025 **Mechatronica Campus De Vesten**. Dit project is gedeeld onder de **MIT-licentie**.
+Copyright© 2025 **Mechatronica Campus De Vesten**. Dit project is gedeeld onder de [**MIT-licentie**](LICENSE.txt).
