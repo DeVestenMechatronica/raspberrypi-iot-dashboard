@@ -29,15 +29,11 @@ influxdb3 serve --object-store file --data-dir ~/.influxdb3 --node-id node0
 ```
 
 #### Aanmaken database & gebruiker
-In de commandline:
-```sh
-influxdb3 
-```
 Toegang `token` genereren voor de `admin` gebruiker:
 ```sh
 influxdb3 create token --admin
 ```
->[!WARNING]
+>[!IMPORTANT]
 > **Hou deze `token` goed bij!** Deze hebben we nodig om toegang the hebben tot de database.
 > Token: apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
 
