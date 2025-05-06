@@ -119,3 +119,6 @@ sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars -
 #### Configureer `InfluxDB` als databron voor `Grafana`
 1) In de browser, open het Grafana dashboard `https://localhost:3000`, en log in met de `admin` credentials.
 2) 
+
+## Licentie
+Copyright© 2025 **Mechatronica Campus De Vesten**. Dit project is gedeeld onder de **MIT-licentie**.
