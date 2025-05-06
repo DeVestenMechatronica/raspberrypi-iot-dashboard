@@ -11,16 +11,20 @@ sudo apt update
 sudo apt upgrade -y
 ```
 ### InfluxDB3 Core
-
+#### Installatie
 Installeer `InfluxDB`, en volg de instructies van het installatiescript
 ```sh
 curl -O https://www.influxdata.com/d/install_influxdb3.sh
 sh install_influxdb3.sh
 ```
-Om de `InfluxDB CLI` te gebruiken, voor het volgende commando uit:
+Om de `InfluxDB CLI` te gebruiken, voor het volgende commando uit. Test of je het kan gebruiken door de versie op te vragen.
 ```sh
-source '/home/mechatronica/.bashrc'
+source ~/.bashrc
+influxdb3 --version
 ```
+
+#### Setup
+
 
 >[WARNING]
 > Dit is de token, hou deze goed bij!
@@ -76,7 +80,7 @@ sudo apt install chromium-browser
 ```
 Om te zorgen dat de `Chromium` browser start op ons `Grafana` dashboard wanneer de Raspberry Pi opstart, voeg volgende lijn toe in het bestand `/etc/xdg/labwc/autostart`:
 ```
-sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars --ozone-platform=wayland http://localhost:3000/d/dasboard-unique-id/monitor?orgId=1&kiosk= &
+sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars --ozone-platform=wayland http://localhost:3000/d/dasboard-unique-id/monitor?orgId=1&kiosk &
 ```
 
 
