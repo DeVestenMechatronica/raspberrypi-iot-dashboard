@@ -79,6 +79,10 @@ in `/etc/grafana/grafana.ini`, wijzig deze lijn naar 'true':
 ```
 [auth]
 disable_login_form = true
+
+[auth.anonymous]
+# enable anonymous access
+enabled = true
 ```
 ### Chromium (browser)
 TODO: ... Grafana werkt met een web-interface ...
@@ -89,7 +93,8 @@ sudo apt install chromium-browser
 ```
 Om te zorgen dat de `Chromium` browser start op ons `Grafana` dashboard wanneer de Raspberry Pi opstart, voeg volgende lijn toe in het bestand `/etc/xdg/labwc/autostart`:
 ```
-sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars --ozone-platform=wayland http://localhost:3000/d/dasboard-unique-id/monitor?orgId=1&kiosk &
+sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars --ozone-platform=wayland http://localhost:3000/d/bel1pwxub2fwga/monitor?orgId=1&kiosk &
+
 ```
 
 
