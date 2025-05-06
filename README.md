@@ -1,8 +1,13 @@
 # IoT Data Monitor
-Deze opstelling maakt van een Raspberry Pi een lokale datahub en monitor voor Internet of Things-projecten. De Raspberry Pi draait `InfluxDB 3` (een efficiënte tijdreeksdatabase) en `Grafana` (een krachtige tool voor datavisualisatie), met een scherm voor directe visualisatie.
+Deze opstelling maakt van een **Raspberry Pi** een lokale datahub en monitor voor Internet of Things-projecten. De Raspberry Pi draait `InfluxDB 3` (een efficiënte tijdreeksdatabase) en `Grafana` (een krachtige tool voor datavisualisatie), met een scherm voor directe visualisatie.
 
-IoT-apparaten op het netwerk (Arduino, Raspberry Pi, ...) kunnen meetgegevens naar deze datahub sturen, waar ze automatisch worden opgeslagen en visueel worden weergegeven. Dit maakt het ideaal voor projecten rond sensoren, dataverwerking, netwerken en visualisatie.
+IoT-apparaten op het netwerk (Arduino, Raspberry Pi, ...) kunnen meetgegevens naar deze datahub sturen, waar deze worden opgeslagen en visueel worden weergegeven. Dit maakt het ideaal voor projecten rond sensoren, dataverwerking, netwerken en visualisatie.
 
+**Hardware:**
+- **Raspberry Pi 3B+/4B/5B** single-board computer
+- **Raspberry Pi 7" Touch Display** om de data weer te geven
+
+**Software:**
 - **Opslag van sensor data** met `InfluxDB` database
 - **Visualisatie van de data** met `Grafana` dashboard
 - **Lokale weergave** met `Chromium` webbrowser
