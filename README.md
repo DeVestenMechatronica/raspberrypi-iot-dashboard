@@ -23,25 +23,34 @@ source ~/.bashrc
 influxdb3 --version
 ```
 
-#### Setup
-
-
->[WARNING]
-> Dit is de token, hou deze goed bij!
-> Token: apiv3_VRKtRtzOEYJJ-jDKN8uV3iBuh3g93ArpBdnH_GPyJxAZ0CF_pNDk-nlOxRdzWd4oATd7zppYf2Aees8wP3wScg
-
-#### referenties:
-https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
+Database server starten:
+```sh
+influxdb3 serve --object-store file --data-dir ~/.influxdb3 --node-id node0
+```
 
 #### Aanmaken database & gebruiker
 In de commandline:
 ```sh
-influx
-> CREATE DATABASE home
-> CREATE USER grafana WITH PASSWORD 'mechatronica' WITH ALL PRIVILEGES
-> GRANT ALL PRIVILEGES ON home TO grafana
-> exit
+influxdb3 
 ```
+Toegang `token` genereren voor de `admin` gebruiker:
+```sh
+influxdb3 create token --admin
+```
+>[!WARNING]
+> Dit is de admin `token`, hou deze goed bij!
+> Token: apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
+> HTTP Requests Header: Authorization: Bearer apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
+
+Onze `database` voor de sensor data aanmaken:
+```sh
+influxdb3 create database sensors --token apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
+```
+
+#### referenties:
+https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
+
+
 
 ### Grafana
 
