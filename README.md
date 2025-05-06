@@ -17,7 +17,7 @@ Installeer `InfluxDB`, en volg de instructies van het installatiescript
 curl -O https://www.influxdata.com/d/install_influxdb3.sh
 sh install_influxdb3.sh
 ```
-Om de `InfluxDB CLI` te gebruiken, voor het volgende commando uit. Test of je het kan gebruiken door de versie op te vragen.
+Om de `InfluxDB CLI` te kunnen gebruiken, moet je eerst het volgende commando uitvoeren. Test of je het kan gebruiken door de versie op te vragen.
 ```sh
 source ~/.bashrc
 influxdb3 --version
@@ -38,9 +38,8 @@ Toegang `token` genereren voor de `admin` gebruiker:
 influxdb3 create token --admin
 ```
 >[!WARNING]
-> Dit is de admin `token`, hou deze goed bij!
+> **Hou deze `token` goed bij!** Deze hebben we nodig om toegang the hebben tot de database.
 > Token: apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
-> HTTP Requests Header: Authorization: Bearer apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
 
 Onze `database` voor de sensor data aanmaken:
 ```sh
@@ -96,6 +95,9 @@ Om te zorgen dat de `Chromium` browser start op ons `Grafana` dashboard wanneer 
 sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars --ozone-platform=wayland http://localhost:3000/d/bel1pwxub2fwga/monitor?orgId=1&kiosk= &
 
 ```
+
+>[!TIP]
+>Om de `Chromium` browser te sluiten wanneer die in kiosk-modus is, sluit je een toetsenbord aan en druk je `alt+F4`
 
 
 #### Configureer `InfluxDB` als databron voor `Grafana`
