@@ -68,7 +68,7 @@ influxdb3 create database sensors --token apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC
 https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 
 ### Grafana
-Grafana is een krachtige visualisatietool waarmee je live dashboards bouwt op basis van de data in InfluxDB. In plaats van saaie tabellen zie je dynamische grafieken, meters en diagrammen die onmiddellijk reageren op wat er in het systeem gebeurt.
+`Grafana` is een krachtige visualisatietool waarmee je live dashboards bouwt op basis van de data in InfluxDB. In plaats van saaie tabellen zie je dynamische grafieken, meters en diagrammen die onmiddellijk reageren op wat er in het systeem gebeurt.
 
 Het is dé tool die in professionele omgevingen gebruikt wordt om processen, machines of omgevingsdata te monitoren. Voor leerlingen is Grafana een motiverende manier om abstracte data zichtbaar en tastbaar te maken, en zelf dashboards te bouwen die relevant zijn voor hun eigen meetopstellingen.
 
@@ -104,7 +104,7 @@ disable_login_form = true
 enabled = true
 ```
 ### Chromium (browser)
-TODO: ... Grafana werkt met een web-interface ...
+Om het Grafana-dashboard rechtstreeks op het aangesloten scherm van de Raspberry Pi weer te geven, gebruiken we de Chromium-browser. Dit is de open-source basis van Google Chrome, en draait vlot op de Raspberry Pi. Chromium wordt zo ingesteld dat het automatisch opstart in volledig scherm (kioskmodus) en het lokale Grafana-dashboard toont. Op die manier wordt het scherm een visualisatiepaneel.
 
 Installeer de `Chromium` web browser:
 ```
