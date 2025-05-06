@@ -92,12 +92,11 @@ sudo systemctl status grafana-server
 #### Configure Grafana auto-login
 in `/etc/grafana/grafana.ini`, wijzig deze lijn naar 'true':
 ```
-[auth]
-disable_login_form = true
-
 [auth.anonymous]
-# enable anonymous access
 enabled = true
+org_name = Main Org.
+org_role = Viewer
+
 ```
 ### Chromium (browser)
 Om het Grafana-dashboard rechtstreeks op het aangesloten scherm van de Raspberry Pi weer te geven, gebruiken we de Chromium-browser. Dit is de open-source basis van Google Chrome, en draait vlot op de Raspberry Pi. Chromium wordt zo ingesteld dat het automatisch opstart in volledig scherm (kioskmodus) en het lokale Grafana-dashboard toont. Op die manier wordt het scherm een visualisatiepaneel.
@@ -118,7 +117,18 @@ sleep 5 && /usr/bin/chromium-browser --kiosk --noerrdialogs --disable-infobars -
 
 #### Configureer `InfluxDB` als databron voor `Grafana`
 1) In de browser, open het Grafana dashboard `https://localhost:3000`, en log in met de `admin` credentials.
-2) 
+2) Connecteer met de Influx als databron
+```
+Query language: SQL
+
+--- HTTP ---
+URL: http://localhost:8181
+
+--- InfluxDB details ---
+Database: Sensors
+Token: <token from earlier>
+Insecure connection: true
+```
 
 ## Licentie
 Copyright© 2025 **Mechatronica Campus De Vesten**. Dit project is gedeeld onder de [**MIT-licentie**](LICENSE.txt).
