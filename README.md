@@ -31,8 +31,6 @@ sudo apt upgrade -y
 
 In tegenstelling tot een klassieke relationele database (zoals MySQL), is InfluxDB ontworpen om efficiënt grote hoeveelheden meetdata te verwerken en op te slaan. Het systeem begrijpt meteen wat je bedoelt met “laat de laatste waarde zien” of “bereken het gemiddelde van de afgelopen 10 minuten”.
 
-Voor leerlingen is het een ideale manier om te leren werken met echte sensordata, en te begrijpen hoe moderne systemen data verzamelen en analyseren in de industrie.
-
 #### Installatie
 Installeer `InfluxDB`, en volg de instructies van het installatiescript
 ```sh
@@ -68,9 +66,7 @@ influxdb3 create database sensors --token apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC
 https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 
 ### Grafana
-`Grafana` is een krachtige visualisatietool waarmee je live dashboards bouwt op basis van de data in InfluxDB. In plaats van saaie tabellen zie je dynamische grafieken, meters en diagrammen die onmiddellijk reageren op wat er in het systeem gebeurt.
-
-Het is dé tool die in professionele omgevingen gebruikt wordt om processen, machines of omgevingsdata te monitoren. Voor leerlingen is Grafana een motiverende manier om abstracte data zichtbaar en tastbaar te maken, en zelf dashboards te bouwen die relevant zijn voor hun eigen meetopstellingen.
+`Grafana` is een krachtige visualisatietool waarmee je live dashboards bouwt op basis van de data in InfluxDB. In plaats van saaie tabellen zie je dynamische grafieken, meters en diagrammen die onmiddellijk reageren op wat er in het systeem gebeurt. Het is dé tool die in professionele omgevingen gebruikt wordt om processen, machines of omgevingsdata te monitoren.
 
 #### Installatie
 Voeg de `Grafana` repository en key to aan de `apt` package manager (als administrator):
