@@ -138,4 +138,4 @@ Insecure connection: true
 ```
 
 ## Licentie
-Copyright© 2025 **Mechatronica Campus De Vesten**. Dit project is gedeeld onder de [**MIT-licentie**](LICENSE.txt).
+**Copyright© 2025 Mechatronica Campus De Vesten**. Dit project is gedeeld onder de [**MIT-licentie**](LICENSE.txt).
