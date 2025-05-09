@@ -18,7 +18,7 @@ IoT-apparaten op het netwerk (Arduino, Raspberry Pi, ...) kunnen meetgegevens na
 
 ## Getting Started
 ### Opstelling
-De kern van het systeem is een Raspberry Pi met een Touch Display (of klein HDMI-scherm). De Raspberry Pi is verbonden met het lokale netwerk via wifi of een netwerkkabel, zodat IoT-opstellingen zoals Arduino’s of andere Raspberry Pi’s via het netwerk gegevens kunnen doorsturen.
+De kern van het systeem is een **Raspberry Pi** met het **Raspberry Pi 7" Touch Display** (of klein HDMI-scherm). De Raspberry Pi is verbonden met het lokale netwerk via wifi of een netwerkkabel, zodat IoT-opstellingen zoals Arduino’s of andere Raspberry Pi’s via het netwerk gegevens kunnen doorsturen.
 
 >[!TIP]
 >**Het is aangeraden om een appart (wifi) netwerk te voorzien voor IoT projecten.** Bespreek dit met je ICT coordinator.
