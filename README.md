@@ -62,6 +62,9 @@ Onze `database` voor de sensor data aanmaken:
 influxdb3 create database sensors --token apiv3_twVOSg3DPHEVzmaQ64sbDv6tlCdo9jFC8JG0UQgHHxfDaWNUYnauYpZXpLLm7QtOi2YSITPkL5dZy760HfeKAg
 ```
 
+>[!TIP]
+>Om vanuit een Python programma data weg te schrijven naar de `InfluxDB` database via HTTP, gebruik de je `influxdb3-python` library.
+
 #### referenties:
 https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 
