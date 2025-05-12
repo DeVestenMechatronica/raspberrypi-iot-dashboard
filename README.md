@@ -52,6 +52,11 @@ Database server starten:
 influxdb3 serve --object-store file --data-dir ~/.influxdb3 --node-id node0
 ```
 
+We willen dat InfluxDB ook start bij het opstarten. Voeg hiervoor volgende lijn toe in het bestand `/etc/xdg/labwc/autostart`:
+```
+/home/mechatronica/.influxdb//influxdb3 serve --object-store file --data-dir ~/.influxdb3 --node-id node0 &
+```
+
 #### Aanmaken database & gebruiker
 Toegang `token` genereren voor de `admin` gebruiker:
 ```sh
