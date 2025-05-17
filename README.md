@@ -85,7 +85,7 @@ https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 We willen dat onze database server steeds op dezelfde gekende *plaats* bereikbaar is voor andere toestellen op het netwerk. Hiervoor gebruiken we een statisch ip adres. Dit configureren we met `nmcli`:
 ```sh
 sudo nmcli con add con-name "Wired connection 1" ifname eth0 type ethernet ip4 10.30.40.2/24
-nmcli con up "Wired connection 1"
+sudo nmcli con up "Wired connection 1"
 ```
 
 ### Grafana
