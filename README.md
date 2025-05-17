@@ -80,6 +80,14 @@ influxdb3 create database sensors --token apiv3_JQ6PIMb81AYBgdMEY0FLLN_pjIF8zkA0
 #### referenties:
 https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 
+
+### Statisch IP adres
+We willen dat onze database server steeds op dezelfde gekende *plaats* bereikbaar is voor andere toestellen op het netwerk. Hiervoor gebruiken we een statisch ip adres. Dit configureren we met `nmcli`:
+```sh
+sudo nmcli con add con-name "Wired connection 1" ifname eth0 type ethernet ip4 10.30.40.2/24
+nmcli con up "Wired connection 1"
+```
+
 ### Grafana
 `Grafana` is een krachtige visualisatietool waarmee je live dashboards bouwt op basis van de data in InfluxDB. In plaats van saaie tabellen zie je dynamische grafieken, meters en diagrammen die onmiddellijk reageren op wat er in het systeem gebeurt. Het is dé tool die in professionele omgevingen gebruikt wordt om processen, machines of omgevingsdata te monitoren.
 
