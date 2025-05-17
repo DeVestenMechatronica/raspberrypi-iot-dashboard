@@ -74,6 +74,9 @@ influxdb3 create database sensors --token apiv3_JQ6PIMb81AYBgdMEY0FLLN_pjIF8zkA0
 >[!TIP]
 >Om vanuit een Python programma data weg te schrijven naar de `InfluxDB` database via HTTP, gebruik de je `influxdb3-python` library.
 
+>[!TIP]
+>Na een plots verlies van stroom kan de database corrupt zijn waardoor de database server niet meer kan starten. Verwijder de bestanden in de `~/.influxdb3/node0/wal/` map en probeer opnieuw.
+
 #### referenties:
 https://docs.influxdata.com/influxdb3/core/reference/cli/influxdb3/
 
