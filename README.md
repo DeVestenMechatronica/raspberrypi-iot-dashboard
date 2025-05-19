@@ -68,7 +68,7 @@ influxdb3 create token --admin
 
 Onze `database` voor de sensor data aanmaken:
 ```sh
-influxdb3 create database sensors --token apiv3_JQ6PIMb81AYBgdMEY0FLLN_pjIF8zkA08sbVRzSAqZSeCg-1eoYm8a20XP8GWesUywz3elhDIXtDIRs489IJTw
+influxdb3 create database sensors --token apiv3_EGJTJEnVwntVLy-j8hBkvNaOdujM-sM5cXAZMV8fdWsMirvM71VwIrIOniQZMk3Dl0P4Gk9SCPhfKprhXqsrEg
 ```
 
 >[!TIP]
